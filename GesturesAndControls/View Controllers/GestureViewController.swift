@@ -9,11 +9,12 @@
 import UIKit
 
 enum ActionGesture: Int {
-    case tap, doubleTap, twoFingerTap, leftSwipe, rightSwipe
+    case tap, doubleTap, leftSwipe, rightSwipe
 }
 
 class GestureViewController: UIViewController {
-
+    var backgroundColor: Float = 0.0
+    
     @IBOutlet var tapGestureRecognizer: UITapGestureRecognizer!
     @IBOutlet var doubleTapGestureRecognizer: UITapGestureRecognizer!
     @IBOutlet weak var actionToPerformLabel: UILabel!
@@ -48,7 +49,6 @@ class GestureViewController: UIViewController {
         switch actionGes {
         case .tap: updateText = "tap"
         case .doubleTap: updateText = "double tap"
-        case .twoFingerTap: updateText = "two finger tap"
         case .leftSwipe: updateText = "swift left"
         case .rightSwipe: updateText = "swipe right"
         }
@@ -57,7 +57,7 @@ class GestureViewController: UIViewController {
     }
     
     func pickRandomActionGesture() -> ActionGesture {
-        let randomInt = Int(arc4random_uniform(5)) // number between 0-4
+        let randomInt = Int(arc4random_uniform(4)) // number between 0-3
         return ActionGesture.init(rawValue: randomInt) ?? .tap
     }
     
@@ -65,7 +65,7 @@ class GestureViewController: UIViewController {
         self.currentActionGesture = pickRandomActionGesture()
         
         if selected {
-            self.view.backgroundColor = UIColor.green
+            self.view.backgroundColor = UIColor(hue: CGFloat(self.backgroundColor), saturation: 0.5, brightness: 0.5, alpha: 1.0)
             self.currentScore += 1
         }
         else {
@@ -81,8 +81,7 @@ class GestureViewController: UIViewController {
             
             switch (tapGesture.numberOfTapsRequired, tapGesture.numberOfTouchesRequired, self.currentActionGesture){
             case (1, 1, .tap),
-                 (2, 1, .doubleTap),
-                 (1, 2, .twoFingerTap):
+                 (2, 1, .doubleTap):
                 actionMatchedGesture = true
                 
             default: print("tap type was wrong!")

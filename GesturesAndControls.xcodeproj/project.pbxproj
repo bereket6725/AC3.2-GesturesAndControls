@@ -10,12 +10,11 @@
 		14C0BCE61D9C857000C51C30 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C0BCE51D9C857000C51C30 /* MenuTableViewController.swift */; };
 		14C0BCE81D9CA28D00C51C30 /* GestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C0BCE71D9CA28D00C51C30 /* GestureViewController.swift */; };
 		14FA111D1D9C665A00DBFBD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FA111C1D9C665A00DBFBD6 /* AppDelegate.swift */; };
-		14FA111F1D9C665A00DBFBD6 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FA111E1D9C665A00DBFBD6 /* MasterViewController.swift */; };
-		14FA11211D9C665A00DBFBD6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FA11201D9C665A00DBFBD6 /* DetailViewController.swift */; };
 		14FA11241D9C665A00DBFBD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14FA11221D9C665A00DBFBD6 /* Main.storyboard */; };
 		14FA11261D9C665A00DBFBD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FA11251D9C665A00DBFBD6 /* Assets.xcassets */; };
 		14FA11291D9C665A00DBFBD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14FA11271D9C665A00DBFBD6 /* LaunchScreen.storyboard */; };
 		14FA11341D9C665A00DBFBD6 /* GesturesAndControlsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FA11331D9C665A00DBFBD6 /* GesturesAndControlsTests.swift */; };
+		1E5694901D9D48B0007E69D1 /* ControlPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E56948F1D9D48B0007E69D1 /* ControlPanelViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,8 +32,6 @@
 		14C0BCE71D9CA28D00C51C30 /* GestureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GestureViewController.swift; path = "View Controllers/GestureViewController.swift"; sourceTree = "<group>"; };
 		14FA11191D9C665A00DBFBD6 /* GesturesAndControls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GesturesAndControls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FA111C1D9C665A00DBFBD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		14FA111E1D9C665A00DBFBD6 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		14FA11201D9C665A00DBFBD6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		14FA11231D9C665A00DBFBD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		14FA11251D9C665A00DBFBD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14FA11281D9C665A00DBFBD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,6 +39,7 @@
 		14FA112F1D9C665A00DBFBD6 /* GesturesAndControlsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GesturesAndControlsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FA11331D9C665A00DBFBD6 /* GesturesAndControlsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesAndControlsTests.swift; sourceTree = "<group>"; };
 		14FA11351D9C665A00DBFBD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E56948F1D9D48B0007E69D1 /* ControlPanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ControlPanelViewController.swift; path = "View Controllers/ControlPanelViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,9 +63,9 @@
 		14C0BCE31D9C849D00C51C30 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1E56948F1D9D48B0007E69D1 /* ControlPanelViewController.swift */,
 				14C0BCE51D9C857000C51C30 /* MenuTableViewController.swift */,
 				14C0BCE71D9CA28D00C51C30 /* GestureViewController.swift */,
-				14C0BCE91D9CA29200C51C30 /* Free VC */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -81,15 +79,6 @@
 				14FA112A1D9C665A00DBFBD6 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		14C0BCE91D9CA29200C51C30 /* Free VC */ = {
-			isa = PBXGroup;
-			children = (
-				14FA111E1D9C665A00DBFBD6 /* MasterViewController.swift */,
-				14FA11201D9C665A00DBFBD6 /* DetailViewController.swift */,
-			);
-			name = "Free VC";
 			sourceTree = "<group>";
 		};
 		14FA11101D9C665A00DBFBD6 = {
@@ -234,9 +223,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14FA11211D9C665A00DBFBD6 /* DetailViewController.swift in Sources */,
 				14C0BCE61D9C857000C51C30 /* MenuTableViewController.swift in Sources */,
-				14FA111F1D9C665A00DBFBD6 /* MasterViewController.swift in Sources */,
+				1E5694901D9D48B0007E69D1 /* ControlPanelViewController.swift in Sources */,
 				14C0BCE81D9CA28D00C51C30 /* GestureViewController.swift in Sources */,
 				14FA111D1D9C665A00DBFBD6 /* AppDelegate.swift in Sources */,
 			);
