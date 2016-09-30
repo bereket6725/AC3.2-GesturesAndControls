@@ -29,7 +29,7 @@
                         <viewControllerLayoutGuide type="bottom" id="A6V-gb-5bF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="SG3-V8-eoy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -47,7 +47,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Wuj-QW-LU1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fAi-Rf-cAg">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qh-fd-HnY" userLabel="Prompt">
@@ -78,6 +78,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="actionToPerformLabel" destination="6qh-fd-HnY" id="Hy7-8e-tlC"/>
                         <outlet property="doubleTapGestureRecognizer" destination="U0L-ug-Nnx" id="Tef-Wd-Ne6"/>
                         <outlet property="leftSwipeGestureRecognizer" destination="VZg-dW-bxT" id="p5d-Ih-Zwx"/>
                         <outlet property="rightSwipeGestureRecognizer" destination="VQS-Pu-Td4" id="pKT-3w-JRO"/>
