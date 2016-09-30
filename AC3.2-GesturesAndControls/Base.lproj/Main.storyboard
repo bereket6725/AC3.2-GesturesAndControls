@@ -50,7 +50,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1045" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prompt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4x-GF-41k">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action To Perform" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4x-GF-41k">
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -78,6 +78,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="actionToPerformLabel" destination="C4x-GF-41k" id="jkx-da-uTd"/>
                         <outlet property="doubleTapGestureRecognizer" destination="rZo-gc-OBQ" id="7jU-9O-hbi"/>
                         <outlet property="leftSwipeGestureRecognizer" destination="fDc-Tb-e24" id="aP9-yG-ZZJ"/>
                         <outlet property="rightSwipeGestureRecognizer" destination="66B-Jt-2mu" id="tFN-0a-2WR"/>
