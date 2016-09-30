@@ -13,6 +13,8 @@ class GesturesViewController: UIViewController {
     @IBOutlet var tapGestureRecognizer: UITapGestureRecognizer!
     @IBOutlet var rightSwipeGestureRecognizer: UISwipeGestureRecognizer!
     @IBOutlet var leftSwipeGestureRecognizer: UISwipeGestureRecognizer!
+    @IBOutlet var doubleTapGestureRecognizer: UITapGestureRecognizer!
+    @IBOutlet var twoFingerTapGesture: UITapGestureRecognizer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,5 +37,11 @@ class GesturesViewController: UIViewController {
     
     @IBAction func swipedLeft(_ sender: UISwipeGestureRecognizer) {
         print("swiped left")
+    }
+    @IBAction func doubleTapped(_ sender: UITapGestureRecognizer) {
+        print("double tapped")
+    }
+    @IBAction func twoFingerTapped(_ sender: UITapGestureRecognizer) {
+        print("Two finger tapped")
     }
 }

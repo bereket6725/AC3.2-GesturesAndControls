@@ -73,12 +73,16 @@
                             <outletCollection property="gestureRecognizers" destination="iWQ-UF-vDA" appends="YES" id="DyD-Xl-tTj"/>
                             <outletCollection property="gestureRecognizers" destination="66B-Jt-2mu" appends="YES" id="0HW-wr-LSj"/>
                             <outletCollection property="gestureRecognizers" destination="fDc-Tb-e24" appends="YES" id="akM-h3-zCK"/>
+                            <outletCollection property="gestureRecognizers" destination="rZo-gc-OBQ" appends="YES" id="InO-MO-JcL"/>
+                            <outletCollection property="gestureRecognizers" destination="Gj7-Ss-zvY" appends="YES" id="qEO-SA-RDE"/>
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="doubleTapGestureRecognizer" destination="rZo-gc-OBQ" id="7jU-9O-hbi"/>
                         <outlet property="leftSwipeGestureRecognizer" destination="fDc-Tb-e24" id="aP9-yG-ZZJ"/>
                         <outlet property="rightSwipeGestureRecognizer" destination="66B-Jt-2mu" id="tFN-0a-2WR"/>
                         <outlet property="tapGestureRecognizer" destination="iWQ-UF-vDA" id="ggI-xV-uee"/>
+                        <outlet property="twoFingerTapGesture" destination="Gj7-Ss-zvY" id="OZ2-Wg-3Li"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbi-VP-oxQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -97,6 +101,16 @@
                         <action selector="swipedLeft:" destination="8wL-vk-Zpv" id="uM0-AN-MZ1"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="rZo-gc-OBQ">
+                    <connections>
+                        <action selector="doubleTapped:" destination="8wL-vk-Zpv" id="lYF-Ac-Qcc"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer numberOfTouchesRequired="2" id="Gj7-Ss-zvY">
+                    <connections>
+                        <action selector="twoFingerTapped:" destination="8wL-vk-Zpv" id="FHe-eo-HNP"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1658" y="-317"/>
         </scene>
