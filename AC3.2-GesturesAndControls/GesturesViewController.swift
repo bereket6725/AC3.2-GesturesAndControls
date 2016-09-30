@@ -88,6 +88,29 @@ class GesturesViewController: UIViewController {
         self.isCorrect(self.currentActionGesture == .twoFingerTap)
     }
     
+    /*************/
+    
+    func didPerformGesture(_ sender: UIGestureRecognizer) {
+        if let tapGesture: UITapGestureRecognizer = sender as? UITapGestureRecognizer {
+            //do stuff
+            switch(tapGesture.numberOfTapsRequired, tapGesture.numberOfTouchesRequired) {
+            case (1, 1):
+                print("I was tapped")
+                self.isCorrect(self.currentActionGesture == .tap)
+            case (2, 1):
+                print("double tap!")
+                self.isCorrect(self.currentActionGesture == .doubleTap)
+            case (1, 2):
+                print("two finger tap!")
+                self.isCorrect(self.currentActionGesture == .twoFingerTap)
+            default:
+                print("tap type was wrong!")
+                self.isCorrect(false)
+            }
+        } else if let swipeGesture: UISwipeGestureRecognizer = sender as? UISwipeGestureRecognizer {
+            //do other stuff
+        }
+    }
     
     func isCorrect(_ correct: Bool) {
         self.currentActionGesture = pickRandomActionGesture()
