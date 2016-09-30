@@ -29,14 +29,33 @@
                         <viewControllerLayoutGuide type="bottom" id="e2m-DS-Dgh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Qpi-Ig-KEa">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JPd-eP-DKs"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0K-EE-Esr">
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <segue destination="8wL-vk-Zpv" kind="showDetail" id="p0P-Vh-1BV"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="u0K-EE-Esr" firstAttribute="centerX" secondItem="Qpi-Ig-KEa" secondAttribute="centerX" id="2Vz-zZ-YC0"/>
+                            <constraint firstItem="JPd-eP-DKs" firstAttribute="leading" secondItem="Qpi-Ig-KEa" secondAttribute="leadingMargin" constant="8" id="Fwu-mp-Ysm"/>
+                            <constraint firstItem="JPd-eP-DKs" firstAttribute="top" secondItem="R2f-gT-Rhq" secondAttribute="bottom" constant="8" id="Lah-vG-rog"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JPd-eP-DKs" secondAttribute="trailing" constant="8" id="bIu-7A-wFx"/>
+                            <constraint firstItem="e2m-DS-Dgh" firstAttribute="top" secondItem="u0K-EE-Esr" secondAttribute="bottom" constant="16" id="u9D-hN-CVG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="colorSlider" destination="JPd-eP-DKs" id="6a8-zX-PHP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j1W-4q-htX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1657" y="-997"/>
+            <point key="canvasLocation" x="1656.4453125" y="-997.65625"/>
         </scene>
         <!--Gestures View Controller-->
         <scene sceneID="szD-y4-imT">
@@ -47,7 +66,7 @@
                         <viewControllerLayoutGuide type="bottom" id="bBg-Pe-EGS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="z3g-Jn-AUf">
-                        <rect key="frame" x="0.0" y="0.0" width="1045" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action To Perform" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4x-GF-41k">
@@ -117,4 +136,7 @@
             <point key="canvasLocation" x="1658" y="-317"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="p0P-Vh-1BV"/>
+    </inferredMetricsTieBreakers>
 </document>

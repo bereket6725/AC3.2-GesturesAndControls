@@ -9,6 +9,9 @@
 import UIKit
 
 class GesturesViewController: UIViewController {
+    
+    var correctColorValue = 0.0
+    
     enum ActionGesture: Int {
         case tap, doubleTap, twoFingerTap, leftSwipe, rightSwipe
     }
