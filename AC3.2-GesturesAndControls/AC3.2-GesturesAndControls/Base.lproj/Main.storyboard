@@ -29,14 +29,37 @@
                         <viewControllerLayoutGuide type="bottom" id="A6V-gb-5bF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="SG3-V8-eoy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPR-Vd-tc1">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="PrR-yw-G8W"/>
+                                </constraints>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <segue destination="bOH-91-Pd0" kind="showDetail" id="IVM-yo-Xot"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="uzf-uu-Wp5"/>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.79515832724468694" blue="0.98876115806788434" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="uzf-uu-Wp5" firstAttribute="leading" secondItem="SG3-V8-eoy" secondAttribute="leadingMargin" id="37v-dJ-Wn8"/>
+                            <constraint firstItem="uzf-uu-Wp5" firstAttribute="top" secondItem="MVe-S4-9M1" secondAttribute="bottom" constant="8" id="DUM-hw-Ef9"/>
+                            <constraint firstItem="tPR-Vd-tc1" firstAttribute="centerX" secondItem="SG3-V8-eoy" secondAttribute="centerX" id="pew-eY-UAO"/>
+                            <constraint firstItem="uzf-uu-Wp5" firstAttribute="trailing" secondItem="SG3-V8-eoy" secondAttribute="trailingMargin" id="ugv-Ix-bAE"/>
+                            <constraint firstAttribute="bottom" secondItem="tPR-Vd-tc1" secondAttribute="bottom" constant="20" symbolic="YES" id="xFX-sh-V6D"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="colorSlider" destination="uzf-uu-Wp5" id="dqx-l4-wkD"/>
+                        <outlet property="saveButton" destination="tPR-Vd-tc1" id="Uc8-3p-TGx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u6k-g9-ZO5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="64" y="-340"/>
+            <point key="canvasLocation" x="63.867187499999993" y="-340.625"/>
         </scene>
         <!--Gestures View Controller-->
         <scene sceneID="F5r-RK-Wor">
@@ -47,7 +70,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Wuj-QW-LU1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fAi-Rf-cAg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qh-fd-HnY" userLabel="Prompt">
@@ -82,6 +105,7 @@
                         <outlet property="doubleTapGestureRecognizer" destination="U0L-ug-Nnx" id="Tef-Wd-Ne6"/>
                         <outlet property="leftSwipeGestureRecognizer" destination="VZg-dW-bxT" id="p5d-Ih-Zwx"/>
                         <outlet property="rightSwipeGestureRecognizer" destination="VQS-Pu-Td4" id="pKT-3w-JRO"/>
+                        <outlet property="scoreLabel" destination="w4M-pN-0y0" id="nbQ-R4-aNc"/>
                         <outlet property="tapGestureRecognizer" destination="vre-MR-n8x" id="ALg-WZ-wRE"/>
                         <outlet property="twoFingerTapGestureRecognizer" destination="kmi-OQ-bDX" id="gg3-1r-6vx"/>
                     </connections>
@@ -89,31 +113,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pec-yr-kJm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="vre-MR-n8x">
                     <connections>
-                        <action selector="didTapView:" destination="bOH-91-Pd0" id="ElF-uc-6Ly"/>
+                        <action selector="didPerformGesture:" destination="bOH-91-Pd0" id="KsG-jJ-ghx"/>
                     </connections>
                 </tapGestureRecognizer>
                 <swipeGestureRecognizer direction="right" id="VQS-Pu-Td4">
                     <connections>
-                        <action selector="swipedRight:" destination="bOH-91-Pd0" id="dtH-QK-zca"/>
+                        <action selector="didPerformGesture:" destination="bOH-91-Pd0" id="fo0-Ja-0P1"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="VZg-dW-bxT">
                     <connections>
-                        <action selector="swipedLeft:" destination="bOH-91-Pd0" id="qZo-Ar-EzF"/>
+                        <action selector="didPerformGesture:" destination="bOH-91-Pd0" id="xuU-RX-XlR"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <tapGestureRecognizer numberOfTapsRequired="2" id="U0L-ug-Nnx">
                     <connections>
-                        <action selector="didDoubleTapView:" destination="bOH-91-Pd0" id="3OJ-OV-faz"/>
+                        <action selector="didPerformGesture:" destination="bOH-91-Pd0" id="u9e-tK-29m"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer numberOfTouchesRequired="2" id="kmi-OQ-bDX">
                     <connections>
-                        <action selector="didTwoFingerTapView:" destination="bOH-91-Pd0" id="nwA-MD-CND"/>
+                        <action selector="didPerformGesture:" destination="bOH-91-Pd0" id="glP-Qh-g6i"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="62.695312499999993" y="340.625"/>
+            <point key="canvasLocation" x="64" y="356"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="IVM-yo-Xot"/>
+    </inferredMetricsTieBreakers>
 </document>
