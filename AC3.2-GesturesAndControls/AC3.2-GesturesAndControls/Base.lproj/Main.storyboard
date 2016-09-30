@@ -31,12 +31,31 @@
                     <view key="view" contentMode="scaleToFill" id="4j3-JT-BGK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLV-SR-Hob">
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <segue destination="7Ml-Ky-VM1" kind="showDetail" id="3Vu-rQ-6jF"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Wty-Y6-hXR"/>
+                        </subviews>
                         <color key="backgroundColor" red="0.53680857997180587" green="0.67914822914959638" blue="0.95320512820512815" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="Wty-Y6-hXR" secondAttribute="leading" id="4FB-E1-na9"/>
+                            <constraint firstItem="Wty-Y6-hXR" firstAttribute="top" secondItem="NRL-Ls-5V5" secondAttribute="bottom" id="60z-gy-XAK"/>
+                            <constraint firstItem="jLV-SR-Hob" firstAttribute="centerX" secondItem="4j3-JT-BGK" secondAttribute="centerX" id="Co5-zX-eyl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wty-Y6-hXR" secondAttribute="trailing" id="jnp-fX-v2M"/>
+                            <constraint firstItem="uNm-xT-ZX0" firstAttribute="top" secondItem="jLV-SR-Hob" secondAttribute="bottom" constant="8" symbolic="YES" id="taO-hG-Cty"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="colorSlider" destination="Wty-Y6-hXR" id="EWr-P5-KdF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUI-WV-Kic" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-578" y="-221"/>
+            <point key="canvasLocation" x="-578.03806734992679" y="-221.48437499999997"/>
         </scene>
         <!--Gestures View Controller-->
         <scene sceneID="VEa-E0-kUr">
@@ -78,8 +97,9 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="didDoubleTapView" destination="VYZ-Ge-ZhD" id="uiv-2E-kDU"/>
+                        <outlet property="actionToPerformLabel" destination="4T5-IT-bM2" id="JcY-EJ-oi8"/>
                         <outlet property="doubleTapGestureRecognizer" destination="VYZ-Ge-ZhD" id="8Op-wc-K6O"/>
+                        <outlet property="scoreLabel" destination="0OI-Es-tq6" id="b9q-LR-gcU"/>
                         <outlet property="swipeLeftGestureRecognizer" destination="WiG-ZK-hf0" id="KJS-OD-YTN"/>
                         <outlet property="swipeRightGestureRecognizer" destination="WiG-ZK-hf0" id="Vgj-RX-9z0"/>
                         <outlet property="tapGestureRecognizer" destination="CfH-Gb-3Ii" id="8ED-gq-M7Z"/>
@@ -94,7 +114,7 @@
                 </tapGestureRecognizer>
                 <swipeGestureRecognizer direction="right" id="zfg-Wn-OdL">
                     <connections>
-                        <action selector="didSwipeRightView:" destination="7Ml-Ky-VM1" id="Bl8-hc-TxS"/>
+                        <action selector="didPerformGesture:" destination="7Ml-Ky-VM1" id="d6j-nG-Pz0"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="WiG-ZK-hf0">
@@ -116,4 +136,7 @@
             <point key="canvasLocation" x="-578" y="532"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="3Vu-rQ-6jF"/>
+    </inferredMetricsTieBreakers>
 </document>
