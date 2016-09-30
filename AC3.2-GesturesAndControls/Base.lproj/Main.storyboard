@@ -90,27 +90,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbi-VP-oxQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="iWQ-UF-vDA">
                     <connections>
-                        <action selector="didTapView:" destination="8wL-vk-Zpv" id="uJb-58-eO5"/>
+                        <action selector="didPerformGesture:" destination="8wL-vk-Zpv" id="otd-cV-KbH"/>
                     </connections>
                 </tapGestureRecognizer>
                 <swipeGestureRecognizer direction="right" id="66B-Jt-2mu">
                     <connections>
-                        <action selector="swipedRight:" destination="8wL-vk-Zpv" id="AHS-63-1H7"/>
+                        <action selector="didPerformGesture:" destination="8wL-vk-Zpv" id="OeZ-2S-4eH"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="fDc-Tb-e24">
                     <connections>
-                        <action selector="swipedLeft:" destination="8wL-vk-Zpv" id="uM0-AN-MZ1"/>
+                        <action selector="didPerformGesture:" destination="8wL-vk-Zpv" id="Gvr-ze-L5f"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <tapGestureRecognizer numberOfTapsRequired="2" id="rZo-gc-OBQ">
                     <connections>
-                        <action selector="doubleTapped:" destination="8wL-vk-Zpv" id="lYF-Ac-Qcc"/>
+                        <action selector="didPerformGesture:" destination="8wL-vk-Zpv" id="7oC-fm-gbC"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer numberOfTouchesRequired="2" id="Gj7-Ss-zvY">
                     <connections>
-                        <action selector="twoFingerTapped:" destination="8wL-vk-Zpv" id="FHe-eo-HNP"/>
+                        <action selector="didPerformGesture:" destination="8wL-vk-Zpv" id="Evs-FJ-pZb"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
