@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uBP-f2-Q2I">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Split View Controller-->
+        <scene sceneID="Ojg-tU-15z">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J6p-Gj-XlT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <splitViewController id="uBP-f2-Q2I" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="9cb-Mg-Ta3" kind="relationship" relationship="detailViewController" id="0h5-LD-rMh"/>
+                        <segue destination="N1G-E0-Vdg" kind="relationship" relationship="masterViewController" id="2wQ-aW-SVH"/>
+                    </connections>
+                </splitViewController>
+            </objects>
+            <point key="canvasLocation" x="951" y="-269"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="IpM-lK-Via">
+            <objects>
+                <viewController id="N1G-E0-Vdg" customClass="SettingsViewController" customModule="AC3_2_GestureAndControls" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bcZ-ZR-mbp"/>
+                        <viewControllerLayoutGuide type="bottom" id="OM7-wI-EKM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HOF-jF-VtI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNy-oO-Ozl">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="1nI-dJ-Ifj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="25"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.97928315401077271" green="0.028500251471996307" blue="0.56890112161636353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9cb-Mg-Ta3" kind="showDetail" id="7bP-Mk-PlR"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZwU-3d-nNX">
+                                <frame key="frameInset" minX="14" minY="41" width="347" height="31"/>
+                                <color key="tintColor" red="0.99607473611831665" green="0.99220293760299683" blue="0.99199241399765015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="Gj2-J9-lex"/>
+                                </constraints>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94120293855667114" green="0.75031024217605591" blue="0.84431010484695435" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZwU-3d-nNX" firstAttribute="centerX" secondItem="ZNy-oO-Ozl" secondAttribute="centerX" id="2p0-4B-xw6"/>
+                            <constraint firstItem="OM7-wI-EKM" firstAttribute="top" secondItem="ZNy-oO-Ozl" secondAttribute="bottom" constant="48" id="bsU-SM-Kqr"/>
+                            <constraint firstItem="ZwU-3d-nNX" firstAttribute="centerX" secondItem="HOF-jF-VtI" secondAttribute="centerX" id="cEQ-SC-mzQ"/>
+                            <constraint firstItem="ZwU-3d-nNX" firstAttribute="top" secondItem="bcZ-ZR-mbp" secondAttribute="bottom" constant="21" id="dX1-Jf-utF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="colorSlider" destination="ZwU-3d-nNX" id="14i-Ns-1rv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qbS-lz-B79" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1716" y="-570"/>
+        </scene>
+        <!--Gestures View Controller-->
+        <scene sceneID="rRQ-rh-47v">
+            <objects>
+                <viewController id="9cb-Mg-Ta3" customClass="GesturesViewController" customModule="AC3_2_GestureAndControls" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m0g-gm-HmL"/>
+                        <viewControllerLayoutGuide type="bottom" id="AUX-1M-Y1z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c9X-gJ-tKB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prompt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asI-ZS-kKI">
+                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Dr-d7-NsL">
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.41737383604049683" green="0.90826541185379028" blue="0.84853118658065796" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="asI-ZS-kKI" firstAttribute="centerY" secondItem="c9X-gJ-tKB" secondAttribute="centerY" id="EcZ-o6-5of"/>
+                            <constraint firstItem="9Dr-d7-NsL" firstAttribute="trailing" secondItem="c9X-gJ-tKB" secondAttribute="trailingMargin" constant="8" id="JKD-DK-18X"/>
+                            <constraint firstItem="asI-ZS-kKI" firstAttribute="centerX" secondItem="c9X-gJ-tKB" secondAttribute="centerX" id="OXz-zJ-zed"/>
+                            <constraint firstItem="9Dr-d7-NsL" firstAttribute="top" secondItem="m0g-gm-HmL" secondAttribute="bottom" constant="8" id="aIm-AF-Fj0"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="iOH-0W-Cv0" appends="YES" id="zoF-Lm-KvS"/>
+                            <outletCollection property="gestureRecognizers" destination="D2q-uo-oko" appends="YES" id="zcc-fB-bzQ"/>
+                            <outletCollection property="gestureRecognizers" destination="q8M-37-1a8" appends="YES" id="2QX-rk-p1I"/>
+                            <outletCollection property="gestureRecognizers" destination="wI3-So-xjo" appends="YES" id="MR9-0h-try"/>
+                            <outletCollection property="gestureRecognizers" destination="nbk-Xc-VE4" appends="YES" id="l63-hJ-dSL"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="actionToPerformLabel" destination="asI-ZS-kKI" id="vhx-ia-3qd"/>
+                        <outlet property="doubleTapGestureRecognizer" destination="wI3-So-xjo" id="Dp8-10-NrS"/>
+                        <outlet property="leftSwipeGestureRecognizer" destination="iOH-0W-Cv0" id="FLi-07-XvS"/>
+                        <outlet property="rightSwipeGestureRecognizer" destination="D2q-uo-oko" id="Slm-fF-3J1"/>
+                        <outlet property="scoreLabel" destination="9Dr-d7-NsL" id="dYb-tb-Q4y"/>
+                        <outlet property="tapGestureRecoginzer" destination="q8M-37-1a8" id="cgN-VL-ZQm"/>
+                        <outlet property="twoFingerGestureRecognizer" destination="nbk-Xc-VE4" id="QWa-vz-Vi6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0D0-7q-Jb0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="q8M-37-1a8">
+                    <connections>
+                        <action selector="didPerformGesture:" destination="9cb-Mg-Ta3" id="Rcq-BC-g4Q"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="D2q-uo-oko">
+                    <connections>
+                        <action selector="didPerformGesture:" destination="9cb-Mg-Ta3" id="HgR-ed-0IT"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="iOH-0W-Cv0">
+                    <connections>
+                        <action selector="didPerformGesture:" destination="9cb-Mg-Ta3" id="IZJ-KZ-Chl"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="wI3-So-xjo">
+                    <connections>
+                        <action selector="didPerformGesture:" destination="9cb-Mg-Ta3" id="X8M-ZX-has"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer numberOfTouchesRequired="2" id="nbk-Xc-VE4">
+                    <connections>
+                        <action selector="didPerformGesture:" destination="9cb-Mg-Ta3" id="bsk-8M-qVv"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1716" y="151"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="PLo-Ji-Y9M">
+            <objects>
+                <viewController id="JO6-pN-t7x" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fvm-UX-eep"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jk4-Wn-yuG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EGH-Bb-3D3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="umV-Gc-Wu2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="7bP-Mk-PlR"/>
+    </inferredMetricsTieBreakers>
+</document>

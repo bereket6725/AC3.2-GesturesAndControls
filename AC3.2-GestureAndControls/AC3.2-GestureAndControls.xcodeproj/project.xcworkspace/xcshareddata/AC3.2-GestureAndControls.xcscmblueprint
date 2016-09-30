@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E334D5705A87B8B2D2564880AC6F11E9B72EF151",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "34C99EC4657D730267A707C2FE7D9CC7F83D83B6" : 9223372036854775807,
+    "E334D5705A87B8B2D2564880AC6F11E9B72EF151" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4B891EB9-28C9-4A51-826B-299A80A01FC7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "34C99EC4657D730267A707C2FE7D9CC7F83D83B6" : "",
+    "E334D5705A87B8B2D2564880AC6F11E9B72EF151" : "AC3.2-GesturesAndControls\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "AC3.2-GestureAndControls",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "AC3.2-GestureAndControls\/AC3.2-GestureAndControls.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/amtung\/AC3.2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "34C99EC4657D730267A707C2FE7D9CC7F83D83B6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/amtung\/AC3.2-GesturesAndControls.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E334D5705A87B8B2D2564880AC6F11E9B72EF151"
+    }
+  ]
+}
