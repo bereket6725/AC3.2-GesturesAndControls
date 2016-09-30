@@ -13,12 +13,19 @@ class GesturesViewController: UIViewController {
         case tap, doubleTap, twoFingerTap, leftSwipe, rightSwipe
     }
     
-    var currentActionGesture: ActionGesture = .tap {
+    var currentActionGesture = ActionGesture.tap {
         willSet {
             self.updateLabel(for: newValue)
         }
     }
     
+    var currentScore = 0 {
+        willSet {
+            self.scoreLabel.text = "Score: \(newValue)"
+        }
+    }
+    
+    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var actionToPerformLabel: UILabel!
     
     @IBOutlet var tapGestureRecognizer: UITapGestureRecognizer!
@@ -43,7 +50,7 @@ class GesturesViewController: UIViewController {
         case .tap: updateText = "tap"
         case .doubleTap: updateText = "double tap"
         case .twoFingerTap: updateText = "two finger tap"
-        case .leftSwipe: updateText = "swift left"
+        case .leftSwipe: updateText = "swipe left"
         case .rightSwipe: updateText = "swipe right"
         }
         
@@ -53,15 +60,17 @@ class GesturesViewController: UIViewController {
     // a way to randomly get a gesture
     func pickRandomActionGesture() -> ActionGesture {
         let randomInt = Int(arc4random_uniform(5)) // number between 0-4
-        return ActionGesture.init(rawValue: randomInt) ?? .tap
+        return ActionGesture(rawValue: randomInt) ?? .tap
     }
     
     @IBAction func didTapView(_ sender: UITapGestureRecognizer) {
         print("I was tapped")
         if self.currentActionGesture == .tap {
             self.view.backgroundColor = UIColor.green
+            currentScore += 1
         } else {
             self.view.backgroundColor = UIColor.red
+            currentScore = 0
         }
         self.currentActionGesture = pickRandomActionGesture()
     }
@@ -70,8 +79,10 @@ class GesturesViewController: UIViewController {
         print("swiped right")
         if self.currentActionGesture == .rightSwipe {
             self.view.backgroundColor = UIColor.green
+            currentScore += 1
         } else {
             self.view.backgroundColor = UIColor.red
+            currentScore = 0
         }
         self.currentActionGesture = pickRandomActionGesture()
     }
@@ -80,8 +91,10 @@ class GesturesViewController: UIViewController {
         print("swiped left")
         if self.currentActionGesture == .leftSwipe {
             self.view.backgroundColor = UIColor.green
+            currentScore += 1
         } else {
             self.view.backgroundColor = UIColor.red
+            currentScore = 0
         }
         self.currentActionGesture = pickRandomActionGesture()
     }
@@ -90,8 +103,10 @@ class GesturesViewController: UIViewController {
         print("double tapped")
         if self.currentActionGesture == .doubleTap {
             self.view.backgroundColor = UIColor.green
+            currentScore += 1
         } else {
             self.view.backgroundColor = UIColor.red
+            currentScore = 0
         }
         self.currentActionGesture = pickRandomActionGesture()
     }
@@ -100,9 +115,16 @@ class GesturesViewController: UIViewController {
         print("Two finger tapped")
         if self.currentActionGesture == .twoFingerTap {
             self.view.backgroundColor = UIColor.green
+            currentScore += 1
         } else {
             self.view.backgroundColor = UIColor.red
+            currentScore = 0
         }
         self.currentActionGesture = pickRandomActionGesture()
+    }
+    
+    
+    func correctActionGesture(selected: Bool) {
+        
     }
 }

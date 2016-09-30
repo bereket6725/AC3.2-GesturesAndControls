@@ -82,6 +82,7 @@
                         <outlet property="doubleTapGestureRecognizer" destination="rZo-gc-OBQ" id="7jU-9O-hbi"/>
                         <outlet property="leftSwipeGestureRecognizer" destination="fDc-Tb-e24" id="aP9-yG-ZZJ"/>
                         <outlet property="rightSwipeGestureRecognizer" destination="66B-Jt-2mu" id="tFN-0a-2WR"/>
+                        <outlet property="scoreLabel" destination="K3I-Fc-JjI" id="07T-M9-PUu"/>
                         <outlet property="tapGestureRecognizer" destination="iWQ-UF-vDA" id="ggI-xV-uee"/>
                         <outlet property="twoFingerTapGesture" destination="Gj7-Ss-zvY" id="OZ2-Wg-3Li"/>
                     </connections>
