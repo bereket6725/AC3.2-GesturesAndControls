@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eow-1Q-a65">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Split View Controller-->
+        <scene sceneID="nTQ-Dc-z8L">
+            <objects>
+                <splitViewController id="eow-1Q-a65" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="bOH-91-Pd0" kind="relationship" relationship="detailViewController" id="UmR-B6-eJP"/>
+                        <segue destination="TDY-c0-Q4S" kind="relationship" relationship="masterViewController" id="BhS-yw-dWy"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pch-ep-XTf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-915" y="2"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="Ke5-Ca-9XM">
+            <objects>
+                <viewController id="TDY-c0-Q4S" customClass="SettingsViewController" customModule="AC3_2_GesturesAndControls" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MVe-S4-9M1"/>
+                        <viewControllerLayoutGuide type="bottom" id="A6V-gb-5bF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SG3-V8-eoy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u6k-g9-ZO5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64" y="-340"/>
+        </scene>
+        <!--Gestures View Controller-->
+        <scene sceneID="F5r-RK-Wor">
+            <objects>
+                <viewController id="bOH-91-Pd0" customClass="GesturesViewController" customModule="AC3_2_GesturesAndControls" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7od-EI-8wL"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wuj-QW-LU1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fAi-Rf-cAg">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qh-fd-HnY" userLabel="Prompt">
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4M-pN-0y0" userLabel="Score">
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="w4M-pN-0y0" firstAttribute="top" secondItem="7od-EI-8wL" secondAttribute="bottom" constant="8" symbolic="YES" id="Clq-sL-uuE"/>
+                            <constraint firstItem="w4M-pN-0y0" firstAttribute="trailing" secondItem="fAi-Rf-cAg" secondAttribute="trailingMargin" id="bcA-Lf-Ghh"/>
+                            <constraint firstItem="6qh-fd-HnY" firstAttribute="centerY" secondItem="fAi-Rf-cAg" secondAttribute="centerY" id="kmR-yg-CNb"/>
+                            <constraint firstItem="6qh-fd-HnY" firstAttribute="centerX" secondItem="fAi-Rf-cAg" secondAttribute="centerX" id="mdu-rI-Qyh"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="vre-MR-n8x" appends="YES" id="PCA-Lq-yaA"/>
+                            <outletCollection property="gestureRecognizers" destination="VQS-Pu-Td4" appends="YES" id="JO8-Ka-Nvl"/>
+                            <outletCollection property="gestureRecognizers" destination="VZg-dW-bxT" appends="YES" id="q8U-zN-uJF"/>
+                            <outletCollection property="gestureRecognizers" destination="U0L-ug-Nnx" appends="YES" id="YmN-qF-kO7"/>
+                            <outletCollection property="gestureRecognizers" destination="kmi-OQ-bDX" appends="YES" id="m0c-js-blY"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="doubleTapGestureRecognizer" destination="U0L-ug-Nnx" id="Tef-Wd-Ne6"/>
+                        <outlet property="leftSwipeGestureRecognizer" destination="VZg-dW-bxT" id="p5d-Ih-Zwx"/>
+                        <outlet property="rightSwipeGestureRecognizer" destination="VQS-Pu-Td4" id="pKT-3w-JRO"/>
+                        <outlet property="tapGestureRecognizer" destination="vre-MR-n8x" id="ALg-WZ-wRE"/>
+                        <outlet property="twoFingerTapGestureRecognizer" destination="kmi-OQ-bDX" id="gg3-1r-6vx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pec-yr-kJm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="vre-MR-n8x">
+                    <connections>
+                        <action selector="didTapView:" destination="bOH-91-Pd0" id="ElF-uc-6Ly"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="VQS-Pu-Td4">
+                    <connections>
+                        <action selector="swipedRight:" destination="bOH-91-Pd0" id="dtH-QK-zca"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="VZg-dW-bxT">
+                    <connections>
+                        <action selector="swipedLeft:" destination="bOH-91-Pd0" id="qZo-Ar-EzF"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="U0L-ug-Nnx">
+                    <connections>
+                        <action selector="didDoubleTapView:" destination="bOH-91-Pd0" id="3OJ-OV-faz"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer numberOfTouchesRequired="2" id="kmi-OQ-bDX">
+                    <connections>
+                        <action selector="didTwoFingerTapView:" destination="bOH-91-Pd0" id="nwA-MD-CND"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="62.695312499999993" y="340.625"/>
+        </scene>
+    </scenes>
+</document>
