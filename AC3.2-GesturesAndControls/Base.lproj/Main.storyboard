@@ -29,7 +29,7 @@
                         <viewControllerLayoutGuide type="bottom" id="pSF-sI-wKO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sg5-M7-GFO">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tbd-3B-6hV">
@@ -37,28 +37,82 @@
                                     <constraint firstAttribute="width" constant="46" id="rXr-6q-JHP"/>
                                 </constraints>
                                 <state key="normal" title="Save"/>
-                                <connections>
-                                    <segue destination="ogV-KT-dEg" kind="showDetail" id="EOd-KY-yXj"/>
-                                </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bRS-eF-hra"/>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bRS-eF-hra">
+                                <frame key="frameInset" minX="15" minY="86" width="347" height="31"/>
+                                <connections>
+                                    <segue destination="ogV-KT-dEg" kind="showDetail" id="ZNH-2k-Evi"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="HF1-eO-5mO">
+                                <frame key="frameInset" minX="15" minY="147" width="347" height="31"/>
+                                <connections>
+                                    <segue destination="ogV-KT-dEg" kind="showDetail" id="igf-Rc-3Lh"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="U5V-7e-bvn">
+                                <frame key="frameInset" minX="14" minY="210" width="347" height="31"/>
+                                <connections>
+                                    <segue destination="ogV-KT-dEg" kind="showDetail" id="97o-zt-jKt"/>
+                                </connections>
+                            </slider>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Gr-Dd-1jM">
+                                <frame key="frameInset" minX="68" minY="280" width="223" height="106"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="AyS-b8-wWQ"/>
+                                    <constraint firstAttribute="width" constant="223" id="STB-mu-Qkz"/>
+                                </constraints>
+                            </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QDu-ZD-Hk3">
+                                <connections>
+                                    <segue destination="ogV-KT-dEg" kind="showDetail" id="MK3-3V-kdK"/>
+                                </connections>
+                            </switch>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="hJs-Sc-pSy"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mMu-Cj-cQ1">
+                                <frame key="frameInset" minX="127" minY="28" width="121" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Right"/>
+                                    <segment title="Wrong"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.8518490621375493" blue="0.93824774966654123" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="bRS-eF-hra" firstAttribute="centerX" secondItem="Tbd-3B-6hV" secondAttribute="centerX" id="0Ij-76-7ga"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Gr-Dd-1jM" secondAttribute="trailing" constant="68" id="5v1-VE-50G"/>
+                            <constraint firstItem="U5V-7e-bvn" firstAttribute="trailing" secondItem="HF1-eO-5mO" secondAttribute="trailing" id="8J6-UD-Gvs"/>
+                            <constraint firstAttribute="bottom" secondItem="9Gr-Dd-1jM" secondAttribute="bottom" constant="281" id="8WO-0K-clR"/>
+                            <constraint firstItem="hJs-Sc-pSy" firstAttribute="top" secondItem="QDu-ZD-Hk3" secondAttribute="bottom" constant="32" id="8gZ-bz-HBf"/>
+                            <constraint firstItem="HF1-eO-5mO" firstAttribute="top" secondItem="bRS-eF-hra" secondAttribute="bottom" constant="38" id="8tA-JP-Yk0"/>
                             <constraint firstItem="bRS-eF-hra" firstAttribute="trailing" secondItem="sg5-M7-GFO" secondAttribute="trailingMargin" id="EDE-Co-nFD"/>
+                            <constraint firstItem="QDu-ZD-Hk3" firstAttribute="centerX" secondItem="9Gr-Dd-1jM" secondAttribute="centerX" id="Fc4-yB-b40"/>
+                            <constraint firstItem="U5V-7e-bvn" firstAttribute="leading" secondItem="HF1-eO-5mO" secondAttribute="leading" id="Kq5-OV-ppd"/>
+                            <constraint firstItem="9Gr-Dd-1jM" firstAttribute="leading" secondItem="sg5-M7-GFO" secondAttribute="leadingMargin" constant="52" id="Lhq-Rs-3iC"/>
+                            <constraint firstItem="hJs-Sc-pSy" firstAttribute="centerX" secondItem="QDu-ZD-Hk3" secondAttribute="centerX" id="Ppx-zT-LqP"/>
+                            <constraint firstItem="HF1-eO-5mO" firstAttribute="leading" secondItem="bRS-eF-hra" secondAttribute="leading" id="Pwx-9u-nrk"/>
                             <constraint firstAttribute="bottom" secondItem="Tbd-3B-6hV" secondAttribute="bottom" constant="20" symbolic="YES" id="Rqb-ai-bf7"/>
                             <constraint firstItem="bRS-eF-hra" firstAttribute="leading" secondItem="sg5-M7-GFO" secondAttribute="leadingMargin" id="RwN-cp-DAw"/>
+                            <constraint firstItem="QDu-ZD-Hk3" firstAttribute="top" secondItem="9Gr-Dd-1jM" secondAttribute="bottom" constant="47" id="VqK-xE-wTT"/>
                             <constraint firstItem="bRS-eF-hra" firstAttribute="top" secondItem="tIF-Oo-dAZ" secondAttribute="bottom" constant="8" symbolic="YES" id="hMh-M7-Mzv"/>
+                            <constraint firstItem="9Gr-Dd-1jM" firstAttribute="top" secondItem="sg5-M7-GFO" secondAttribute="top" constant="336" id="onP-VU-QBM"/>
+                            <constraint firstItem="U5V-7e-bvn" firstAttribute="top" secondItem="HF1-eO-5mO" secondAttribute="bottom" constant="51" id="qko-8U-Ui5"/>
+                            <constraint firstItem="HF1-eO-5mO" firstAttribute="trailing" secondItem="bRS-eF-hra" secondAttribute="trailing" id="v9H-Hh-sdp"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="colorSlider" destination="bRS-eF-hra" id="YJV-a1-guJ"/>
+                        <outlet property="blue" destination="HF1-eO-5mO" id="1gW-Cy-YfT"/>
+                        <outlet property="green" destination="U5V-7e-bvn" id="M8t-Xn-YEE"/>
+                        <outlet property="previewColor" destination="9Gr-Dd-1jM" id="4l9-8l-tUW"/>
+                        <outlet property="red" destination="bRS-eF-hra" id="b58-ZI-SON"/>
+                        <outlet property="resetScore" destination="QDu-ZD-Hk3" id="CdV-pb-sXL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KDL-y3-bUO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="123.63281249999999" y="-586.71875"/>
+            <point key="canvasLocation" x="122.40000000000001" y="-586.95652173913049"/>
         </scene>
         <!--Gestures View Controller-->
         <scene sceneID="e9d-85-ClC">
@@ -69,7 +123,7 @@
                         <viewControllerLayoutGuide type="bottom" id="1PH-j8-o3Z"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="h3p-1U-ioM">
-                        <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="piS-iC-l1d" userLabel="Prompt">
@@ -140,6 +194,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="EOd-KY-yXj"/>
+        <segue reference="igf-Rc-3Lh"/>
     </inferredMetricsTieBreakers>
 </document>

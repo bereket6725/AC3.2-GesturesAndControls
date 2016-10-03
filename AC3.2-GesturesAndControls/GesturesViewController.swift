@@ -9,7 +9,12 @@
 import UIKit
 
 class GesturesViewController: UIViewController {
-    var correctColorValue = 0.0
+    
+    var switchOn: Bool = true
+    var settings = SettingsViewController()
+    var redValue = 0.0
+    var blueValue = 0.0
+    var greenValue = 1.0
     
     enum ActionGesture: Int {
         case tap, doubleTap, twoFingerTap, leftSwipe, rightSwipe
@@ -66,31 +71,7 @@ class GesturesViewController: UIViewController {
     }
     
     // MARK: - Actions
-//    @IBAction func didTapView(_ sender: UITapGestureRecognizer) {
-//        print("I was tapped")
-//        self.isCorrect(self.currentActionGesture == .tap)
-//    }
-//    
-//    @IBAction func swipedLeft(_ sender: UISwipeGestureRecognizer) {
-//        print("Swiped left")
-//        self.isCorrect(self.currentActionGesture == .leftSwipe)
-//    }
-//    
-//    @IBAction func swipedRight(_ sender: UISwipeGestureRecognizer) {
-//        print("Swiped right")
-//        self.isCorrect(self.currentActionGesture == .rightSwipe)
-//    }
-//    
-//    @IBAction func didDoubleTapView(_ sender: UITapGestureRecognizer) {
-//        print("Did double tap view")
-//        self.isCorrect(self.currentActionGesture == .doubleTap)
-//    }
-//    
-//    @IBAction func didTwoFingerTapView(_ sender: UITapGestureRecognizer) {
-//        print("Did two finger tap view")
-//        self.isCorrect(self.currentActionGesture == .twoFingerTap)
-//    }
-    
+
     @IBAction func didPerformGesture(_ sender: UIGestureRecognizer) {
         if let tapGesture: UITapGestureRecognizer = sender as? UITapGestureRecognizer {
             switch (tapGesture.numberOfTapsRequired, tapGesture.numberOfTouchesRequired) {
@@ -132,12 +113,18 @@ class GesturesViewController: UIViewController {
         }
     }
     
+    func resetScore() {
+        if switchOn == true {
+            currentScore = 0
+        }
+    }
+    
     func isCorrect(_ correct: Bool) {
         self.currentActionGesture = pickRandomActionGesture()
         
         if correct {
             // use the "correctColorValue" to manipulate the red component of a color
-            self.view.backgroundColor = UIColor(red: CGFloat(self.correctColorValue), green: 1.0, blue: 1.0, alpha: 1.0)
+            self.view.backgroundColor = UIColor(red: CGFloat(self.redValue), green: CGFloat(self.greenValue), blue: CGFloat(self.redValue), alpha: 1.0)
             
             // alternatively we can change the hue using this initializer of UIColor
             // self.view.backgroundColor = UIColor(hue: CGFloat(Float(self.correctColorValue)), saturation: 1.0, brightness: 1.0, alpha: 1.0)
@@ -146,7 +133,9 @@ class GesturesViewController: UIViewController {
         }
         else {
             self.view.backgroundColor = UIColor.red
-            self.currentScore = 0
+            
+            resetScore()
+            
         }
     }
 }
