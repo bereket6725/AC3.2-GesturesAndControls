@@ -9,7 +9,10 @@
 import UIKit
 
 class GesturesViewController: UIViewController {
-    var correctColorValue = 0.0
+    var correctColor = UIColor.white
+    var incorrectColor = UIColor.white
+    var resetOnIncorrect = true
+    var scoreToWin = 3
     
     enum ActionGesture: Int {
         case tap, doubleTap, twoFingerTap, leftSwipe, rightSwipe
@@ -137,16 +140,20 @@ class GesturesViewController: UIViewController {
         
         if correct {
             // use the "correctColorValue" to manipulate the red component of a color
-            self.view.backgroundColor = UIColor(red: CGFloat(self.correctColorValue), green: 1.0, blue: 1.0, alpha: 1.0)
-            
-            // alternatively we can change the hue using this initializer of UIColor
-            // self.view.backgroundColor = UIColor(hue: CGFloat(Float(self.correctColorValue)), saturation: 1.0, brightness: 1.0, alpha: 1.0)
-
+            self.view.backgroundColor = self.correctColor
+         
             self.currentScore += 1
+            
+            if self.currentScore == self.scoreToWin {
+                self.currentScore = 0
+            }
         }
         else {
-            self.view.backgroundColor = UIColor.red
-            self.currentScore = 0
+            self.view.backgroundColor = self.incorrectColor
+
+            if self.resetOnIncorrect {
+                self.currentScore = 0
+            }
         }
     }
 }
